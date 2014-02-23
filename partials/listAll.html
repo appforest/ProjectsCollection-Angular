@@ -1,0 +1,15 @@
+<ul class="list-unstyled" id="productsContainer"  ng-controller="gitHubCtrl">
+  <li class="repo" ng-repeat="repo in gitHubRrepos.repos">
+    <article>
+      <div class="row">
+        <a href="#/repo/{{repo.id}}" ng-click="scrollTop()"><div class="sitePic"><img src="./img/{{repo.id}}.png" alt="{{repo.name}}" /></div>
+        <div class="content">
+          <h1>{{repo.name}}</a></h1>
+          <p><a target="_blank" href="https://github.com/{{repo.full_name}}">Visit the repo's site</a></p>
+          <p class="lead">{{repo.description}}</p>
+          <p class="label label-success lang">{{repo.language}}</p>
+        </div>
+      </div>
+    </article>
+  </li>
+</ul>

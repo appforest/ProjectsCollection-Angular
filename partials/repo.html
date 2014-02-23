@@ -1,0 +1,22 @@
+<ul class="list-unstyled" id="productsContainer"  ng-controller="repoController">
+  <li ng-repeat="repo in gitHubRrepos.repos | filter:filt">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 box">
+        <h1><a target="_blank" href="https://github.com/{{repo.full_name}}">{{repo.name}}</a></h1>
+        <hr />
+        <a href="#"><img src="./img/{{repo.id}}.png" alt="{{repo.name}}" /></a>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-pills">
+              <li>Language
+                <span class="label label-success">{{repo.language}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2>About this repo</h2>
+        <p class="lead">{{repo.description}}</p>
+      </div>
+    </div>
+  </li>
+</ul>
